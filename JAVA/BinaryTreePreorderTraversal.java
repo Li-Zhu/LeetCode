@@ -28,6 +28,14 @@ Given binary tree {1,#,2,3},
    3
 return [1,2,3].
 
+
+
+   6
+
+ 3    8
+
+1,4  7,9    ------> 6,3,8,1,4,7,9
+
 Note: Recursive solution is trivial, could you do it iteratively?
 
 

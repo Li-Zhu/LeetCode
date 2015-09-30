@@ -24,30 +24,31 @@ Note: Recursive solution is trivial, could you do it iteratively?
 import java.util.*;
 /*
 
-public class Solution { //interately Way
-    public List<Integer> inorderTraversal(TreeNode root) {
-    	Stack<TreeNode> stack = new Stack<TreeNode> ();
-    	List<Integer> result = new ArrayList<Integer> ();
+public class BinaryTreeinorderTraversal {
+    public List<Integer>  inorderTraversal(TreeNode root){
+        List<Integer> result = new ArrayList<Integer>();
+        Stack<TreeNode> stack = new ArrayDeque<TreeNode>();
+        curr = root;
+        while (curr != null || !stack.isEmpty()){
+            if (curr != null){
+                stack.push(curr);
+                curr =curr.left;
+            }
+            else{
+                result = add(stack.pop();.val);
+                curr = stack.pop();.right
+            }
+        }
+        return result;
 
-    	TreeNode curr = root;
 
-    	while (curr != null || !stack.empty()) {
-    		while (curr !=null) {
-    			stack.add(curr);
-    			curr=curr.left;
-    		}
-    		curr = stack.pop();
-    		result.add(curr.val);
-    		curr = curr.right;
-    	}
-    	return result;
+
     }
-}
 */
 
 public class Solution { //Recuesion Way
     public List<Integer> inorderTraversal(TreeNode root) {
-    	List<Integer> result = ArrayList<Integer> ();
+    	List<Integer> result = new ArrayList<Integer> ();
     	inorderTraversal (root, result);
         return result;
     }
